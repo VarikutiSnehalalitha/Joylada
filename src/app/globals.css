@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 220 20% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 12%;
+    --border: 35 15% 88%;
+    --accent: 38 92% 50%;
+  }
+
+  .dark {
+    --background: 240 18% 7%;
+    --foreground: 40 10% 95%;
+    --card: 240 16% 10%;
+    --card-foreground: 40 10% 95%;
+    --border: 240 14% 18%;
+    --accent: 38 92% 50%;
+  }
+
+  body {
+    background-color: theme('colors.ink.950');
+    color: theme('colors.ink.100');
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 163, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 163, 0.45);
+}
+
+/* Subtle book page texture & shadows */
+.book-shadow {
+  box-shadow: -4px 0 8px -2px rgba(0,0,0,0.3), 6px 12px 24px -4px rgba(0,0,0,0.4);
+}
+
+.book-shadow-light {
+  box-shadow: -2px 0 5px -1px rgba(0,0,0,0.1), 4px 8px 16px -2px rgba(0,0,0,0.15);
+}
+
+/* Editorial line clamp */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
